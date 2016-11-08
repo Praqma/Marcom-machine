@@ -1,0 +1,60 @@
+#!/bin/bash
+# Shell Script for new Mac computers which installs different tools as Git, Git-up, Brew, Atom, Zsh, Jekyll and setups Git Aliases and Git config.
+
+if [ $# -eq 0 ]; then
+    echo "Please execute this file with these following arguments with the double quotes"
+    echo 'Example: ./installtools "Full name" "Git-Email@email.com" "Github Username"'
+    exit 1
+else
+
+    echo "Installing tools for Praqma users"
+
+    # 1 Install HomeBrew first
+
+    echo "1 - Installing HomeBrew"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </dev/null 2> /dev/null
+
+    # 2 Install Git after HomeBrew is installed
+    echo "2 - Installing Git"
+    brew install git
+
+    # 3 Git Aliases
+    echo "3 - Writing aliases into home/.gitconfig"
+    cat Aliases >> $HOME/.gitconfig
+
+    # 4 Install git up
+    echo "4 - Installing Git-up"
+    sudo gem install git-up
+
+    # 5 Setup Git username and password
+    echo "5 - configuring username and email and OpenDiff as mergetool"
+    echo "Username contains $1"
+    echo "Email contains $2"
+    git config --global user.name "$1"
+    git config --global user.email "$2"
+    git config --global merge.tool opendiff
+
+    # 6 Install Ruby gem GHI
+    echo "6 - Installing GHI"
+    sudo gem install pygments.rb
+    brew install ghi
+
+    # 7 Install Atom.io
+    echo "7 - Installing Atom"
+    brew cask install atom
+
+    # 8 Install Ruby gem: github-pages
+    echo "8 - Installing Ruby gem github-pages"
+    sudo gem install github-pages
+
+    # 9 Configuring Ghi authentication
+    echo "9 - Configuring Ghi authentication"
+    git config --global github.user $3
+    ghi config --auth $3
+
+    # 10 Install Zsh
+    echo "10 - Installing Zsh"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
+fi

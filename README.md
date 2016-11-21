@@ -12,7 +12,7 @@ example:
 
         cd Downloads/shell-script-master
 
-Step 3: Write the following to run the script:
+Step 3: Write the following to run the script including the double Quotation marks:
 
         ./installtools "your full name" "github-email@address.com" "github-username"
 

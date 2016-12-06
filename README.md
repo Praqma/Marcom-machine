@@ -6,14 +6,14 @@ Shell script for new Mac computers which installs and configures tools for Marke
 
 Step 1: Download this repository (Download Zip)
 
-Step 2: In terminal, change your directory to where you downloaded this repository and enter the folder
+Step 2: Open Terminal in Mac OS, in terminal change your working directory to where you downloaded this repository and enter the folder
 
 example:
 
-        cd Downloads/shell-script-master
+        cd Downloads/Marcom-machine-master
 
 Step 3: Write the following to run the script including the double Quotation marks:
 
         ./installtools "your full name" "github-email@address.com" "github-username"
 
-Step 4: While the script is running it will prompt you for your computer password at times - please type password and press Enter. At the end it will prompt you for the Github password.
+Step 4: While the script is running it will prompt you for your COMPUTER PASSWORD at times - please type password(You will not be able to see that you are typing the password) and press Enter. At the end it will prompt you for the Github password.

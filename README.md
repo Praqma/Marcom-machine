@@ -1,5 +1,5 @@
 ---
-Maintainer: ThaKangBaby
+maintainer: ThaKangBaby
 ---
 
 # Installation tool for new Marketing and Communication computers (only for Mac)

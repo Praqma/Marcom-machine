@@ -1,3 +1,7 @@
+---
+Maintainer: ThaKangBaby
+---
+
 # Installation tool for new Marketing and Communication computers (only for Mac)
 
 Shell script for new Mac computers which installs and configures tools for Marketing and Communication @ Praqma. Please make sure you have a **Github** account before you start this installation.
